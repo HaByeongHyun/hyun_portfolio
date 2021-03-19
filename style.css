@@ -12,6 +12,7 @@
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
   --color-light-blue: #1e62df91;
+  --color-dark-blue: #2b91f7;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -121,7 +122,7 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-dark-blue);
 }
 
 .navbar__menu__item.active {
