@@ -23,6 +23,9 @@
   --font-small: 16px;
   --font-micro: 14px;
 
+  /* Annimation */
+  --annimation-duration: 300ms;
+
   /* Size */
   --size-border-radius: 4px;
 
@@ -154,4 +157,71 @@ p {
   border-radius: 4px;
   margin: 24px;
   padding: 8px 12px;
+}
+
+/* Section common */
+.section {
+  text-align: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About me */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 0;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.major__icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.1);
+}
+
+.major__icon i {
+  transition: all var(--annimation-duration) ease;
+}
+
+.major__title {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job__description {
+  margin: 0 16px;
+  text-align: left;
+  color: var(--color-light-grey);
+}
+
+.job__name {
+  font-size: var(--font-small);
+}
+
+.job__period {
+  font-size: var(--font-micro);
+}
+
+.jobs__logo {
+  width: 50px;
+  height: 30px;
 }
