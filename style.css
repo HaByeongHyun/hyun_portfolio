@@ -292,6 +292,33 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
+}
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  right: 16px;
+  opacity: 0;
+  transition: all var(--annimation-duration) ease-in;
+}
+
+.category__btn:hover,
+.category__btn.selected {
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
 }
 
 .work__projects {
