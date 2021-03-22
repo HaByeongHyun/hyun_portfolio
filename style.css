@@ -62,7 +62,7 @@ button {
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   cursor: default;
 }
 
@@ -282,39 +282,41 @@ p {
 
 /* My work */
 
-.work__categories {
-  margin: 40px;
-}
-
 .category__btn {
-  border: 1px solid var(--color-dark-white);
-  border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
-  padding: 8px 48px;
+  border: 1px solid var(--color-blue);
+  padding: 10px 48px;
+  border-radius: var(--size-border-radius);
+  margin-top: 24px;
   position: relative;
+  margin-bottom: 48px;
 }
 
 .category__count {
-  background-color: var(--color-orange);
-  border-radius: 50%;
+  background-color: var(--color-blue);
+  color: var(--color-white);
   width: 24px;
   height: 24px;
   line-height: 24px;
   display: inline-block;
+  border-radius: 50%;
   position: absolute;
   top: -20px;
-  right: 16px;
+  right: 10px;
   opacity: 0;
   transition: all var(--annimation-duration) ease-in;
 }
 
-.category__btn:hover,
-.category__btn.selected {
-  background-color: var(--color-light-blue);
+.category__btn:hover {
+  background-color: var(--color-dark-blue);
   color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
@@ -324,13 +326,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  opacity: 1;
-  transition: all var(--annimation-duration) ease-out;
-}
-
-.work__projects.anim-out {
-  opacity: 0.96;
-  transform: scale(0.96) translateY(40px);
 }
 
 .section__container {
@@ -339,18 +334,14 @@ p {
 }
 
 .project {
-  position: relative;
-  display: flex;
   background-color: var(--color-light-white);
-  align-items: center;
+  display: flex;
   justify-content: center;
-  width: 250px;
+  align-items: center;
+  width: 280px;
   height: 250px;
   margin: 2px;
-}
-
-.project.invisible {
-  display: none;
+  position: relative;
 }
 
 .project__img {
@@ -360,36 +351,38 @@ p {
 
 .project__description {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  opacity: 0;
-  transform: translateY(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   background-color: var(--color-black);
-  transition: all var(--annimation-duration) ease-in;
-}
-
-.project:hover .project__description {
-  opacity: 0.8;
-  transform: translateY(0px);
+  opacity: 0;
+  transition: all var(--annimation-duration) ease-out;
+  transform: translateY(10px);
 }
 
 .project__description h3 {
   color: var(--color-orange);
 }
 
+/* left, translateX 값 인강 확인 */
 .project__description h3:after {
+  content: "";
   display: block;
-  content: '';
   position: relative;
-  left: 50%;
   width: 50px;
   height: 2px;
+  left: 50%;
+  background-color: var(--color-dark-white);
   transform: translateX(-50%);
   margin-top: 8px;
-  background-color: var(--color-dark-white);
+}
+
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
 }
