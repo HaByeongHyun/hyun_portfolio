@@ -62,7 +62,7 @@ button {
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   cursor: default;
 }
 
@@ -371,7 +371,7 @@ p {
 
 /* left, translateX 값 인강 확인 */
 .project__description h3:after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   width: 50px;
@@ -385,4 +385,52 @@ p {
 .project:hover .project__description {
   opacity: 0.8;
   transform: translateY(0px);
+}
+
+/* Testimonial */
+#testimonials {
+  background-color: var(--color-yellow);
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin: 24px;
+}
+
+.testimonial__avatar {
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--color-light-blue);
+  border-radius: 50%;
+}
+
+.testimonial__speech-bubble {
+  margin: 36px;
+  padding: 24px;
+  background-color: var(--color-light-white);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-dark-grey);
+  font-size: var(--font-small);
+}
+
+/* Contact */
+#contact {
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+}
+
+.contact__title {
+  color: var(--color-white);
+}
+
+.contact__email {
+  color: var(--color-white);
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin-bottom: 12px;
 }
