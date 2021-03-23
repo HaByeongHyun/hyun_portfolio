@@ -130,7 +130,7 @@ p {
 }
 
 #home {
-  background: url(/imgs/homebackground.png) center/cover no-repeat;
+  background: url(/imgs/home-background.png) center/cover no-repeat;
   text-align: center;
   padding: 40px;
 }
